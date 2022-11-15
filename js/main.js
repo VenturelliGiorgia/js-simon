@@ -1,5 +1,6 @@
 const numeriRandom = document.getElementById("numeri-random");
-const secondi = 3;
+const secondi = 30;
+const seconds = 31;
 let arrayNumeriRandom = [];
 let numeriUtente = [];
 let numeriTrovati = [];
@@ -7,7 +8,7 @@ let cont = 0;
 numeriRandomGenerator();
 
 function numeriRandomGenerator() {
-//genero 5 numeri random da 1 a 20
+    //genero 5 numeri random da 1 a 20
     for (let i = 0; i < 5; i++) {
         const num = Math.floor(Math.random() * 20) + 1;
         console.log(num);
@@ -22,8 +23,14 @@ setTimeout(function () {
 
     const containerNumeriRandom = document.getElementById("container-numeri-random");
     containerNumeriRandom.classList.add("d-none");//vado a nasondere i numeri
-    numeriInseritiUtente();
+
 }, secondi * 1000);
+
+
+setTimeout(function () {
+
+    numeriInseritiUtente();
+}, seconds * 1000);
 
 
 function numeriInseritiUtente() {
